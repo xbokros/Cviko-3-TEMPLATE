@@ -8,8 +8,13 @@ public class Auto {
     private boolean neojazdene;
 
     public Auto(double kapacitaNadrze){
-        neojazdene = true;
+        this.neojazdene = true;
         this.kapacitaNadrze = kapacitaNadrze;
+    }
+
+    public Auto(){
+        this.kapacitaNadrze = 100;
+        this.neojazdene = true;
     }
 
     public void drive(double distanceInKm){
