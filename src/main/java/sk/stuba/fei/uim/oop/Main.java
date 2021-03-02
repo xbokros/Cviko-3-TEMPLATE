@@ -5,6 +5,8 @@ public class Main {
         Auto skoda = new Auto();
 
         skoda.setStavNadrze(100);
+        System.out.println(skoda.currentState());
+
         skoda.drive(100);
 
         System.out.println(skoda.getStavNadrze());
@@ -12,6 +14,8 @@ public class Main {
         skoda.drive(200);
 
         System.out.println(skoda.getStavNadrze());
+
+        System.out.println(skoda.currentState());
 
 
     }

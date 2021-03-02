@@ -5,6 +5,11 @@ public class Auto {
 
     private double kapacitaNadrze;
     private double stavNadrze;
+    private boolean neojazdene;
+
+    public Auto(){
+        neojazdene = true;
+    }
 
     public void drive(double distanceInKm){
         stavNadrze -= distanceInKm * FUEL_PER_KM;
@@ -20,5 +25,20 @@ public class Auto {
 
     public void setStavNadrze(double stavNadrze) {
         this.stavNadrze = stavNadrze;
+    }
+
+    public boolean isNeojazdene(){
+        return neojazdene;
+    }
+
+    public String currentState(){
+        String result = "";
+        if(this.neojazdene){
+            result = "Auto je nove\n";
+        }else{
+            result = "Auto je ojazdene\n";
+        }
+        result += "\n"+stavNadrze+"/"+kapacitaNadrze;
+        return result;
     }
 }
