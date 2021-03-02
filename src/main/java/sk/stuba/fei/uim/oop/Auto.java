@@ -7,14 +7,15 @@ public class Auto {
     private double stavNadrze;
     private boolean neojazdene;
 
+
+
     public Auto(double kapacitaNadrze){
         this.neojazdene = true;
         this.kapacitaNadrze = kapacitaNadrze;
     }
 
     public Auto(){
-        this.kapacitaNadrze = 100;
-        this.neojazdene = true;
+        this(100);
     }
 
     public void drive(double distanceInKm){
@@ -42,10 +43,10 @@ public class Auto {
     public String currentState(){
         String result = "";
         if(this.neojazdene){
-            result = "Auto je nove\n";
+            result = "Auto je nove";
             neojazdene = false;
         }else{
-            result = "Auto je ojazdene\n";
+            result = "Auto je ojazdene";
         }
         result += "\n"+stavNadrze+"/"+kapacitaNadrze;
         return result;
