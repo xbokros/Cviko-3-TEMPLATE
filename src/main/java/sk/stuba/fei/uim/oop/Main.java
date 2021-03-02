@@ -5,11 +5,13 @@ public class Main {
         Auto skoda = new Auto();
         Auto bmw = new Auto();
 
-        if(skoda == bmw){
+        skoda.one = 1;
+        bmw.one = 2;
+
+        if(skoda.one == bmw.one){
             System.out.println("Rovnake");
         }else{
             System.out.println("Rozne");
         }
-
     }
 }
